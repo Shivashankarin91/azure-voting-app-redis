@@ -8,11 +8,11 @@ pipeline{
             }
       stage('Docker Build') {
          steps {
-            sh 'docker images -a'
+            sh 'sudo docker images -a'
             sh '''               cd /home/labuser/Downloads/gitrepo/azure-voting-app-redis/azure-vote/azure-vote/
-               docker images -a
-               docker build -t jenkins-pipeline .
-               docker images -a
+               sudo docker images -a
+               sudo docker build -t jenkins-pipeline .
+               sudo docker images -a
                cd ..
 '''
          }
